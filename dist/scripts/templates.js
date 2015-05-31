@@ -38,6 +38,16 @@ this["JST"]["repository"] = Handlebars.template({"1":function(depth0,helpers,par
 
   return ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
+this["JST"]["search_bar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "";
+},"useData":true});
+this["JST"]["starred"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "<a href=\"http://github.com/stars\">"
+    + this.escapeExpression(((helper = (helper = helpers.num_starred || (depth0 != null ? depth0.num_starred : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"num_starred","hash":{},"data":data}) : helper)))
+    + "</a>";
+},"useData":true});
 this["JST"]["user"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -65,9 +75,7 @@ this["JST"]["user"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
     + alias3(((helper = (helper = helpers.followers_url || (depth0 != null ? depth0.followers_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers_url","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers","hash":{},"data":data}) : helper)))
-    + "</a><span class=\"stat-number-label\">Followers</span></div>\n        <div class=\"stat-numbers starred\">"
-    + alias3(((helper = (helper = helpers.num_starred || (depth0 != null ? depth0.num_starred : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"num_starred","hash":{},"data":data}) : helper)))
-    + "<span class=\"mid stat-number-label\">Starred</span></div>\n        <div class=\"stat-numbers\"><a href=\""
+    + "</a><span class=\"stat-number-label\">Followers</span></div>\n        <div class=\"stat-numbers starred\"><span class=\"mid stat-number-label\">Starred</span></div>\n        <div class=\"stat-numbers\"><a href=\""
     + alias3(((helper = (helper = helpers.following_url || (depth0 != null ? depth0.following_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following_url","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following","hash":{},"data":data}) : helper)))

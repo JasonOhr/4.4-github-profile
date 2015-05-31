@@ -40,7 +40,7 @@
 
   }
   function renderStarred(totalStarred){
-    $('.starred').append(JST['user']({
+    $('.starred').prepend(JST['starred']({
       num_starred:totalStarred.length
     }));
   }
