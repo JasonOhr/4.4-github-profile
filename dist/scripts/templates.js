@@ -65,7 +65,9 @@ this["JST"]["user"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
     + alias3(((helper = (helper = helpers.followers_url || (depth0 != null ? depth0.followers_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers_url","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers","hash":{},"data":data}) : helper)))
-    + "</a><span class=\"stat-number-label\">Followers</span></div>\n        <div class=\"stat-numbers\">7<span class=\"mid stat-number-label\">Starred</span></div>\n        <div class=\"stat-numbers\"><a href=\""
+    + "</a><span class=\"stat-number-label\">Followers</span></div>\n        <div class=\"stat-numbers starred\">"
+    + alias3(((helper = (helper = helpers.num_starred || (depth0 != null ? depth0.num_starred : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"num_starred","hash":{},"data":data}) : helper)))
+    + "<span class=\"mid stat-number-label\">Starred</span></div>\n        <div class=\"stat-numbers\"><a href=\""
     + alias3(((helper = (helper = helpers.following_url || (depth0 != null ? depth0.following_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following_url","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following","hash":{},"data":data}) : helper)))

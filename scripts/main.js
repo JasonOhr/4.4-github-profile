@@ -15,6 +15,12 @@
       console.log(whatever);
       return whatever;
     }).then(app)
+    .then(function(){
+          return $.ajax({
+            url: "https://api.github.com/users/JasonOhr/starred"
+          })
+        })
+    .then(renderStarred)
     .then( function(){
           return $.ajax({
             url:"https://api.github.com/users/JasonOhr/orgs"
@@ -33,8 +39,13 @@
     renderSidebar (gitStuff);
 
   }
+  function renderStarred(totalStarred){
+    $('.starred').append(JST['user']({
+      num_starred:totalStarred.length
+    }));
+  }
   function renderOrganizations(gitOrgs){
-    console.log(gitOrgs);
+    //console.log(gitOrgs);
     $('.organizations').append(JST['organization'](gitOrgs));
   }
   function renderRepos(repos){
