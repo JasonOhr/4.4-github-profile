@@ -6,10 +6,11 @@
     //$('body').prepend(JST['application']());
 
     $.ajax({
-      url: "https://api.github.com/user",
-      headers: {
-        "Authorization": "token " + GITHUB_TOKEN
-      }
+      url: "https://api.github.com/users/JasonOhr"
+      //url: "https://api.github.com/user",
+      //headers: {
+      //  "Authorization": "token " + GITHUB_TOKEN
+      //}
     }).then(function(whatever){
       console.log(whatever);
       return whatever;
@@ -24,7 +25,7 @@
     ).then(renderOrganizations);
   });
   $.ajax({
-    url:'https://api.github.com/users/JasonOhr/repos'
+    url:'https://api.github.com/users/JasonOhr/repos?sort=created'
 
   }).then(renderRepos);
 
@@ -44,12 +45,26 @@
     $('.sidebar').append(JST['user'](user));
   }
 
+
   Handlebars.registerHelper('date', function(date){
     var d = Date.parse(date);
     d = new Date(d);
 
     return (d.toDateString());
 
-  })
+  });
+  Handlebars.registerHelper('join_date', function(date){
+    return moment(date).format('LL');
+
+  });
+  Handlebars.registerHelper('update', function(date){
+    //console.log(moment(date).fromNow());
+    if(moment(date).fromNow() === "a month ago"){
+      return moment(date).format('MMMM D')
+    }else return moment(date).fromNow();
+
+
+
+  });
 })();
 
