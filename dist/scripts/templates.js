@@ -1,6 +1,6 @@
 this["JST"] = this["JST"] || {};
 this["JST"]["application"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<section class=\"container\">\n    <div class=\"sidebar\">\n\n    </div>\n    <section class=\"repositories\">\n        <ul class=\"repo-url\">\n\n        </ul>\n\n    </section>\n</section>\n";
+    return "<section class=\"container\">\n    <div class=\"sidebar\">\n\n    </div>\n\n    <section class=\"repositories\">\n        <section class=\"search-area\">\n\n        </section>\n        <ul class=\"repo-url\">\n\n        </ul>\n\n    </section>\n</section>\n";
 },"useData":true});
 this["JST"]["organization"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper;
@@ -39,7 +39,7 @@ this["JST"]["repository"] = Handlebars.template({"1":function(depth0,helpers,par
   return ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 this["JST"]["search_bar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    return "<input type=\"search\" placeholder=\"Find a repository...\" class=\"search\">\n<button class=\"search-button\">Search</button>\n<ul class=\"search-list\">\n<li class=\"nav active\">All</li>\n<li class=\"nav\">Public</li>\n<li class=\"nav\">Private</li>\n<li class=\"nav\">Sources</li>\n<li class=\"nav\">Forks</li>\n<li class=\"nav\">Mirrors</li>\n<li><button class=\"new-repo\"><span class=\"octicon octicon-repo\"></span>New</button></li>\n</ul>\n";
 },"useData":true});
 this["JST"]["starred"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;

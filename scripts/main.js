@@ -50,10 +50,14 @@
   }
   function renderRepos(repos){
     $(".repo-url").append(JST['repository'](repos));
+    renderSearchArea();
   }
 
   function renderSidebar(user){
     $('.sidebar').append(JST['user'](user));
+  }
+  function renderSearchArea(){
+    $('.search-area').append(JST['search_bar']());
   }
 
 

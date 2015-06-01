@@ -1,8 +1,12 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
-
-@import "colors";
 $grid-columns: 7;
+@import "page_setup";
+@import "colors";
+@import "user";
+@import "repos";
+@import "search-area";
+
 // Typography
 $base-font-family: $helvetica;
 
@@ -10,163 +14,7 @@ $base-font-family: $helvetica;
 
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
+  background-color: #ffffff;
   color: $base-font-color;
 }
-.container{
-  @include outer-container(980px);
-  margin-top: 20px;
-}
-ul{
-  padding: 0;
-  margin: 18px 0 0 0;
-}
-li a {
-  color: $link-color;
-  text-decoration: none;
-}
-li a:hover {
-  text-decoration: underline;
-}
-.sidebar {
-  @include span-columns(2);
-}
-.user-basic{
-  padding-bottom: 17px;
-  @include border-bottom();
-}
 
-img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-.sidebar h1 {
-  font-size: 1.6em;
-  margin: .17em 0 0 0;
-}
-.sidebar h3 {
-  margin: 0;
-  color:#746666;
-  font-weight: normal;
-}
-.user-info{
-  font-size: 0.85em;
-  @include border-bottom();
-  padding-bottom: 17px;
-
-}
-.user-info li{
-  list-style-type: none;
-  padding-bottom: 8px;
-  position: relative;
-}
-.user-info .octicon {
-  color: $icon-color;
-  position: absolute;
-
-}
-.user-meta {
-  margin-left: 22px;
-}
-
-.github-stats div{
-  @include span-columns(0.66 of 2);
-  display: inline-block;
-}
-.github-stats {
-
-  height: 70px;
-  @include border-bottom();
-}
-div.stat-numbers,
-div.stat-numbers a{
-  color: $link-color;
-  text-align: center;
-
-  font-weight: bold;
-  position: relative;
-  margin-top: 11px;
-}
-div.stat-numbers {
-  font-size: 1.7em;
-}
-.stat-numbers a {
-  text-decoration: none;
-}
-
-.stat-numbers span {
-  color: $update-color;
-  font-size: 11px;
-  font-weight: normal;
-  position: absolute;
-  bottom: -8px;
-  left: 7px;
-
-}
-span.mid {
-  left: 11px;
-}
-
-div.stat-numbers:hover .stat-number-label{
-  color: $link-color;
-}
-.organizations img {
-  height: 40px;
-  width: 40px;
-}
-.repositories{
-  @include span-columns(5);
-}
-.each-repo {
-  padding: 20px 0 20px 0;
-  position: relative;
-  @include border-bottom();
-}
-
-.repositories h3{
-  color: $link-color;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.repositories li {
-  list-style-type: none;
-}
-.updated-repo {
-  color: $update-color;
-  font-size: .85em;
-}
-.repo-description {
-  margin-bottom: 10px;
-  color: $repo-description;
-  font-size: .85em;
-
-}
-.repo-activity {
-
-  position: absolute;
-  right: 0;
-  top: 20px;
-
-}
-.repo-activity span {
-  margin-right: .4em;
-}
-
-.language {
-  color: $update-color;
-  font-size: .75em;
-  font-weight: bold;
-}
-.repo-activity a{
-  color: $update-color;
-  font-size: .8em;
-  font-weight: bold;
-}
-.repo-activity a:hover {
-  color:$link-color;
-}
-.octicon-star::before,
-.octicon-git-branch::before{
-  margin-right: .3em;
-}
