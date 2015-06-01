@@ -12,7 +12,7 @@
       //  "Authorization": "token " + GITHUB_TOKEN
       //}
     }).then(function(whatever){
-      console.log(whatever);
+      //console.log(whatever);
       return whatever;
     }).then(app)
     .then(function(){
@@ -45,7 +45,7 @@
     }));
   }
   function renderOrganizations(gitOrgs){
-    //console.log(gitOrgs);
+
     $('.organizations').append(JST['organization'](gitOrgs));
   }
   function renderRepos(repos){
