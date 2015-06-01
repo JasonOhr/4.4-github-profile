@@ -1,14 +1,18 @@
 {{#each this}}
     <li>
         <div class="each-repo">
-            <h4><a href="{{html_url}}">{{name}}</a></h4>
-            <div class="repo-info">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="repo_description">{{description}}</div>
+            <h3><a href="{{html_url}}">{{name}}</a></h3>
 
+            <div class="repo-description">{{description}}</div>
+            <div class="updated-repo">Updated {{update updated_at}}</div>
+                <span></span>
+                <span></span>
+
+        <span class="repo-activity">
+            <span class="language">{{language}}</span>
+            <span class="stargazer-count"><a class="octicon octicon-star" href="stargazers_url">{{stargazers_count}}</a></span>
+            <span class="forks-count"><a class="octicon octicon-git-branch" href="{{html_url}}/network">{{forks_count}}</a></span>
+        </span>
         </div>
     </li>
 {{/each}}

@@ -6,17 +6,17 @@
     </section>
     <section class="user-info">
         <ul>
-            <li>{{company}}</li>
-            <li>{{location}}</li>
-            <li><a href="{{email}}">{{email}}</a></li>
-            <li><a href="{{blog}}">{{blog}}</a></li>
-            <li>Joined on {{date created_at}}</li>
+            <li><span class="octicon octicon-organization"></span><span class="user-meta">{{company}}</span></li>
+            <li><span class="octicon octicon-location"></span><span class="user-meta">{{location}}</span></li>
+            <li><a href="{{email}}"><span class="octicon octicon-mail"></span><span class="user-meta">{{email}}</span></a></li>
+            <li><a href="{{blog}}"><span class="octicon octicon-link"></span><span class="user-meta">{{blog}}</span></a></li>
+            <li><span class="octicon octicon-clock"></span><span class="user-meta">Joined on {{ join_date created_at}}</span></li>
         </ul>
     </section>
     <section class="github-stats">
-        <div class="stat-numbers">{{followers}}<span>Followers</span></div>
-        <div class="stat-numbers">7<span class="mid">Starred</span></div>
-        <div class="stat-numbers">{{following}}<span>Following</span></div>
+        <div class="stat-numbers"><a href="{{followers_url}}">{{followers}}</a><span class="stat-number-label">Followers</span></div>
+        <div class="stat-numbers starred"><span class="mid stat-number-label">Starred</span></div>
+        <div class="stat-numbers"><a href="{{following_url}}">{{following}}</a><span class="stat-number-label">Following</span></div>
     </section>
     <section class="git-organs">
         <h4>Organizations</h4>
